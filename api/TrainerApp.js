@@ -1,5 +1,5 @@
-module.exports = (request, response) => {
-    let bodyString = request.body;
+module.exports = (req, res) => {
+    let bodyString = req.body;
     var entradaDialogFlow = JSON.parse(bodyString);
     //console.log("Entrada DialogFlow: "+entradaDialogFlow);
     var nombreIntent = entradaDialogFlow['queryResult']['intent'].displayName;
@@ -72,6 +72,5 @@ module.exports = (request, response) => {
     }
 
     // Codigo de estado 200 (ok).
-    response.status(200).send({ fulfillmentText: respuesta });
+    res.status(200).send({ fulfillmentText: respuesta });
 };
-

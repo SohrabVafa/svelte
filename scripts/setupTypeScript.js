@@ -13,21 +13,6 @@
   rm -rf test-template template && git clone sveltejs/template test-template && node scripts/setupTypeScript.js test-template
 */
 
-//Nuevo
-const { json } = require('body-parser');
-
-polka()
-    .use(
-      compression({ threshold: 0 }),
-      json(),
-      sirv('static', { dev }),
-      sapper.middleware()
-    )
-    .listen(PORT, err => {
-        if (err) console.log('error', err);
-    });
-///Nuevo
-
 const fs = require("fs")
 const path = require("path")
 const { argv } = require("process")

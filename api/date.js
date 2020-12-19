@@ -1,4 +1,4 @@
-export default (request, response) => {
+module.exports = (request, response) => {
     let bodyString = request.body;
     var entradaDialogFlow = JSON.parse(bodyString);
     console.log("Entrada DialogFlow: "+entradaDialogFlow);

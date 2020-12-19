@@ -15,11 +15,11 @@ module.exports = (request, response) => {
 
     // Set the headers the way you like
     response.headers['X-Custom-Header'] = 'CustomHeaderValue';
-    return request.json().then((body) => {
-        return response.send({ fulfillmentText: respuesta });
+    request.json().then((body) => {
+        response.send({ fulfillmentText: respuesta });
         //return response.send({speech: "What's up cool developer :)"});
     
     }).catch((err) => {
-        return response.send("Malformed JSON body.");
+        response.send("Malformed JSON body.");
     });
 };

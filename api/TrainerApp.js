@@ -73,6 +73,6 @@ module.exports = (req, res) => {
 //     }
 
     // Codigo de estado 200 (ok).
-    res.status(200).send({ fulfillmentText: respuesta });
+    res.status(200).send({ fulfillmentText: bodyString });
 };
 

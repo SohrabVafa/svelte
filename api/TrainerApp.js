@@ -1,5 +1,5 @@
-module.exports = (req, res) => {
-    
+export default (req, res) => {
+
     let bodyString = req.body;
 //     let entradaDialogFlow = JSON.parse(bodyString);
     //console.log("Entrada DialogFlow: "+entradaDialogFlow);

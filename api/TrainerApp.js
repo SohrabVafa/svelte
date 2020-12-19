@@ -71,9 +71,7 @@ module.exports = (request, response) => {
         respuesta = tutorial;
     }
 
-    // Set the status code - by default it would return 200
-    response.status = 200;
-
-    return response.send({ fulfillmentText: respuesta });
+    // Codigo de estado 200 (ok).
+    response.status(200).send({ fulfillmentText: respuesta });
 };
 

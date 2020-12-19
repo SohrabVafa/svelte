@@ -1,5 +1,13 @@
 module.exports = (req, res) => {
-    let bodyString = req.body;
+    let bodyString = '';
+    req.on('bodyString', chunk => {
+        data += chunk;
+    })
+    req.on('end', () => {
+        var entradaDialogFlow = JSON.parse(bodyString);
+    })
+    
+//     let bodyString = req.body;
 //     let entradaDialogFlow = JSON.parse(bodyString);
     //console.log("Entrada DialogFlow: "+entradaDialogFlow);
     let nombreIntent = entradaDialogFlow['queryResult']['intent'].displayName;

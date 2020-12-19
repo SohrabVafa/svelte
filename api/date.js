@@ -3,10 +3,10 @@ module.exports = (req, res) => {
 //   res.status(200).send({ fulfillmentText: respuesta });
   const fs = require('fs')
   const path = require('path')
-  fs.readFile(path.resolve('api/datos.txt'), 'utf8', function (err,data) {
+  fs.readFile(path.resolve('data/datos.txt'), 'utf8', function (err,data) {
     if (err) {
       return res.status(200).send(err);
     }
-    res.status(200).send({ fulfillmentText: data.dato1 });
+    res.status(200).send({ fulfillmentText: data });
   });
 };

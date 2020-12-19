@@ -1,4 +1,0 @@
-{
-"dato1":"Valor dato1",
-"dato2":"Valor dato2"
-}

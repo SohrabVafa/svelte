@@ -7,6 +7,6 @@ module.exports = (req, res) => {
     if (err) {
       return res.status(200).send(err);
     }
-    res.status(200).send({ fulfillmentText: data });
+    res.status(200).send( data );
   });
 };
